@@ -14,7 +14,7 @@ public class UserConstant {
 	public static List<User> userList = new ArrayList<User>();
 	
 	static {
-		/*userList.add(new User("11053301", "陈云云"));
+		userList.add(new User("11053301", "陈云云"));
 		userList.add(new User("11053302", "葛颖杰"));
 		userList.add(new User("11053303", "肖彩娣"));
 		userList.add(new User("11053304", "张娅娟"));
@@ -23,7 +23,7 @@ public class UserConstant {
 		userList.add(new User("11053307", "白鑫睿"));
 		userList.add(new User("11053308", "包伟统"));
 		userList.add(new User("11053309", "柴泽照"));
-		userList.add(new User("11053310", "陈郭传"));*/
+		userList.add(new User("11053310", "陈郭传"));
 		
 		map.put("11053301", new User("11053301", "陈云云"));
 		map.put("11053302", new User("11053302", "葛颖杰"));

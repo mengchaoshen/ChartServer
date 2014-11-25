@@ -13,6 +13,7 @@
 	<classpathentry kind="lib" path="build/commons-httpclient.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/fastjson-1.1.37.jar"/>
 	<classpathentry kind="lib" path="build/javax.servlet.jar"/>
+	<classpathentry kind="lib" path="build/ddpush.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

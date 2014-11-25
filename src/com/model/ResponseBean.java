@@ -17,6 +17,24 @@ public class ResponseBean implements Serializable{
 	
 	private String userName;
 
+	public ResponseBean() {
+		super();
+	}
+
+	public ResponseBean(boolean success) {
+		super();
+		this.success = success;
+	}
+
+	public ResponseBean(boolean success, boolean correct, String errorMsg,
+			String userName) {
+		super();
+		this.success = success;
+		this.correct = correct;
+		this.errorMsg = errorMsg;
+		this.userName = userName;
+	}
+
 	public boolean isSuccess() {
 		return success;
 	}

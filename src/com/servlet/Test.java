@@ -1,15 +1,11 @@
 package com.servlet;
 
-import com.alibaba.fastjson.JSON;
-import com.model.ResponseBean;
+import com.util.BaseUtil;
 
 public class Test {
 
 	public static void main(String[] args) {
-		ResponseBean responseBean = new ResponseBean();
-
-			responseBean.setSuccess(true);
-			responseBean.setCorrect(true);
-		System.out.println(JSON.toJSONString(responseBean));
+		
+		System.out.println(BaseUtil.getHead("沈梦超"));
 	}
 }
