@@ -14,6 +14,8 @@ public class ResponseBean implements Serializable{
 	private boolean correct;
 	
 	private String errorMsg;
+	
+	private String userName;
 
 	public boolean isSuccess() {
 		return success;
@@ -37,6 +39,14 @@ public class ResponseBean implements Serializable{
 
 	public void setErrorMsg(String errorMsg) {
 		this.errorMsg = errorMsg;
+	}
+
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 	
 	

@@ -14,6 +14,7 @@ import com.constant.UserConstant;
 import com.model.ResponseBean;
 import com.model.User;
 
+
 public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -27,14 +28,17 @@ public class LoginServlet extends HttpServlet {
 		String password = request.getParameter("password");
 		Map<String, User> userMap = UserConstant.map;
 		User user = userMap.get(studyId);
+		
+		
+		response.setContentType("text/html; charset=utf-8");
 		PrintWriter out = response.getWriter();
 		ResponseBean responseBean = new ResponseBean();
-		
 		
 		if(null == user){
 			responseBean.setSuccess(true);
 			responseBean.setCorrect(false);
 		}else{
+			responseBean.setUserName(user.getName());
 			responseBean.setSuccess(true);
 			responseBean.setCorrect(true);
 		}
