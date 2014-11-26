@@ -8,27 +8,53 @@ public class ChartItem implements Serializable{
 
 	private String studyId;
 	
-	private String text;
+	private String chartText;
 	
 	private String chartObject;
 	
 	private String chartType;
 	
 	private String head;
+	
+	private boolean other;
 
 	public ChartItem() {
 		super();
 	}
 
-	public ChartItem(String studyId, String text, String chartObject,
+
+
+	public ChartItem(String studyId, String chartText, String chartObject,
+			String chartType, String head, boolean other) {
+		super();
+		this.studyId = studyId;
+		this.chartText = chartText;
+		this.chartObject = chartObject;
+		this.chartType = chartType;
+		this.head = head;
+		this.other = other;
+	}
+
+
+	public ChartItem(String studyId, String chartText, String chartObject,
 			String chartType, String head) {
 		super();
 		this.studyId = studyId;
-		this.text = text;
+		this.chartText = chartText;
 		this.chartObject = chartObject;
 		this.chartType = chartType;
 		this.head = head;
 	}
+
+	public boolean isOther() {
+		return other;
+	}
+
+
+	public void setOther(boolean other) {
+		this.other = other;
+	}
+
 
 	public String getStudyId() {
 		return studyId;
@@ -38,12 +64,13 @@ public class ChartItem implements Serializable{
 		this.studyId = studyId;
 	}
 
-	public String getText() {
-		return text;
+
+	public String getChartText() {
+		return chartText;
 	}
 
-	public void setText(String text) {
-		this.text = text;
+	public void setChartText(String chartText) {
+		this.chartText = chartText;
 	}
 
 	public String getChartObject() {

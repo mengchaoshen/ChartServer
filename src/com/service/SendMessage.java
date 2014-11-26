@@ -15,8 +15,8 @@ public class SendMessage {
 				try {
 					pusher = new Pusher(GlobConstant.SERVER_IP, 9999, 1000 * 5);
 					byte[] uuid = BaseUtil.md5Byte(studyId);
-					boolean result = pusher.push0x20Message(uuid, text.getBytes());
-					
+					boolean result = pusher.push0x20Message(uuid, text.getBytes("UTF-8"));
+					System.out.println(text);
 					if (result) {
 						System.out.println("通用信息发送成功");
 					} else {

@@ -3,17 +3,7 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="lib" path="build/fastjson-1.1.37.jar"/>
-	<classpathentry kind="lib" path="build/commons-lang-2.5.jar"/>
-	<classpathentry kind="lib" path="build/commons-beanutils-1.8.3.jar"/>
-	<classpathentry kind="lib" path="build/ezmorph-1.0.6.jar"/>
-	<classpathentry kind="lib" path="build/commons-logging-1.0.4.jar"/>
-	<classpathentry kind="lib" path="build/commons-collections-3.2.1.jar"/>
-	<classpathentry kind="lib" path="build/json-lib-2.3-jdk15.jar"/>
-	<classpathentry kind="lib" path="build/commons-httpclient.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/fastjson-1.1.37.jar"/>
-	<classpathentry kind="lib" path="build/javax.servlet.jar"/>
-	<classpathentry kind="lib" path="build/ddpush.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/ddpush.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

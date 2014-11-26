@@ -14,9 +14,9 @@ public class Test{
 				Pusher pusher;
 				try {
 					pusher = new Pusher(GlobConstant.SERVER_IP, 9999, 1000 * 5);
-					byte[] uuid = BaseUtil.md5Byte("user2");
+					byte[] uuid = BaseUtil.md5Byte("11053301");
 //					boolean result = pusher.push0x10Message(uuid);
-					boolean result = pusher.push0x20Message(BaseUtil.md5Byte("user2"), "aslsdsdasdkjdk".getBytes());
+					boolean result = pusher.push0x20Message(uuid, "阿苏的户口和".getBytes());
 					
 					if (result) {
 						System.out.println("通用信息发送成功");

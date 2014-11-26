@@ -16,6 +16,8 @@ public class ResponseBean implements Serializable{
 	private String errorMsg;
 	
 	private String userName;
+	
+	private String studyId;
 
 	public ResponseBean() {
 		super();
@@ -65,6 +67,14 @@ public class ResponseBean implements Serializable{
 
 	public void setUserName(String userName) {
 		this.userName = userName;
+	}
+
+	public String getStudyId() {
+		return studyId;
+	}
+
+	public void setStudyId(String studyId) {
+		this.studyId = studyId;
 	}
 	
 	
