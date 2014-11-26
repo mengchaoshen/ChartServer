@@ -31,8 +31,10 @@ public class SendServlet extends HttpServlet {
         // TODO Auto-generated constructor stub
     }
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String text = request.getParameter("text");
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String text = request.getParameter("json");
 		String responseTxt = null;
 		ChartItem chartItem = JSON.parseObject(text, ChartItem.class);
 		if(null != chartItem){
@@ -52,13 +54,6 @@ public class SendServlet extends HttpServlet {
 		out.write(JSON.toJSONString(new ResponseBean(true)));
 		out.flush();
 		out.close();
-	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 	}
 
 }
