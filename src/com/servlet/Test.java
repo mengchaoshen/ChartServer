@@ -5,7 +5,18 @@ import com.util.BaseUtil;
 public class Test {
 
 	public static void main(String[] args) {
-		
-		System.out.println(BaseUtil.getHead("沈梦超"));
+
+		String text = "AA/ic//ic/BB";
+		String[] faces = {"/id","/ic"};
+
+		for (int i = 0; i < text.length(); i++) {
+			if (text.charAt(i) == '/') {
+				String mayFace = "/" + text.charAt(i + 1) + text.charAt(i + 2);
+				System.out.println(mayFace);
+			}
+
+		}
+
+		// System.out.println(BaseUtil.getHead("沈梦超"));
 	}
 }
