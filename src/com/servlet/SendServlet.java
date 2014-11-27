@@ -2,7 +2,6 @@ package com.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.net.URLEncoder;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -39,7 +38,7 @@ public class SendServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		String text = request.getParameter("json");
-		text = new String(text.getBytes(), "utf-8");
+		text = new String(text.getBytes("ISO8859-1"), "utf-8");
 		System.out.println(text);
 		String responseTxt = null;
 		ChartItem chartItem = JSON.parseObject(text, ChartItem.class);
