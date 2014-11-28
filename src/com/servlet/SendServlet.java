@@ -43,23 +43,30 @@ public class SendServlet extends HttpServlet {
 		String responseTxt = null;
 		ChartItem chartItem = JSON.parseObject(text, ChartItem.class);
 		if (null != chartItem) {
-			User user = UserConstant.map.get(chartItem.getStudyId());
+			User user = UserConstant.map.get(chartItem.getStudyId());//user:发送人
 			if (chartItem.getChartType().equals("0")) {// 群聊
 				List<User> userList = UserConstant.userList;
-				for (User u : userList) {
+				for (User u : userList) {//u:接受者
 					responseTxt = JSON.toJSONString(new ChartItem(u.getId(),
-							chartItem.getChartText(), "group1", "0", BaseUtil
-									.getHead(user.getName()), !u.getId()
+							chartItem.getChartText(), "group1", "0",
+							    user.getName(), !u.getId()
 									.equals(chartItem.getStudyId())));
-					System.out.println(!u.getId()
-							.equals(chartItem.getStudyId()));
 					SendMessage.send(u.getId(), responseTxt);
 				}
 			} else {
-				responseTxt = JSON.toJSONString(new ChartItem(user.getId(),
-						chartItem.getChartText(), chartItem.getChartObject(),
-						"1", BaseUtil.getHead(user.getName())));
-				SendMessage.send(user.getId(), responseTxt);
+				
+				ChartItem ci = new ChartItem();
+				ci.setChartText(chartItem.getChartText());
+				ci.setChartType("1");
+				ci.setHead(user.getName());
+				ci.setChartObject(chartItem.getChartObject());
+				
+				ci.setStudyId(chartItem.getStudyId());
+				ci.setOther(false);
+				SendMessage.send(user.getId(), JSON.toJSONString(ci));//发给自己
+				ci.setOther(true);
+				ci.setStudyId(chartItem.getChartObject());
+				SendMessage.send(chartItem.getChartObject(), JSON.toJSONString(ci));//发给接受者
 			}
 		}
 		response.setContentType("text/html; charset=utf-8");

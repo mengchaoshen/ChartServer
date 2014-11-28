@@ -6,16 +6,31 @@ public class ChartItem implements Serializable{
 
 	private static final long serialVersionUID = -4417466039628009531L;
 
+	/**
+	 * 发送人学号
+	 */
 	private String studyId;
 	
 	private String chartText;
 	
+	/**
+	 * 接受对象，如果是群聊则显示群号，私聊则显示对方学号
+	 */
 	private String chartObject;
 	
+	/**
+	 * 聊天类型
+	 */
 	private String chartType;
 	
+	/**
+	 * 接受对象名字
+	 */
 	private String head;
 	
+	/**
+	 * 是否是自己发的
+	 */
 	private boolean other;
 
 	public ChartItem() {
