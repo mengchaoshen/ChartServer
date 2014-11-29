@@ -15,7 +15,6 @@ import com.model.ChartItem;
 import com.model.ResponseBean;
 import com.model.User;
 import com.service.SendMessage;
-import com.util.BaseUtil;
 
 /**
  * Servlet implementation class SendServlet
@@ -49,7 +48,7 @@ public class SendServlet extends HttpServlet {
 				for (User u : userList) {//u:接受者
 					responseTxt = JSON.toJSONString(new ChartItem(u.getId(),
 							chartItem.getChartText(), "group1", "0",
-							    user.getName(), !u.getId()
+							    user.getName(),user.getId(), !u.getId()
 									.equals(chartItem.getStudyId())));
 					SendMessage.send(u.getId(), responseTxt);
 				}
@@ -59,6 +58,7 @@ public class SendServlet extends HttpServlet {
 				ci.setChartText(chartItem.getChartText());
 				ci.setChartType("1");
 				ci.setHead(user.getName());
+				ci.setSendStudyId(user.getId());
 				ci.setChartObject(chartItem.getChartObject());
 				
 				ci.setStudyId(chartItem.getStudyId());

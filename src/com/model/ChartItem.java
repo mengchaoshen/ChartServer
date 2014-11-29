@@ -28,6 +28,8 @@ public class ChartItem implements Serializable{
 	 */
 	private String head;
 	
+	private String sendStudyId;
+	
 	/**
 	 * 是否是自己发的
 	 */
@@ -37,7 +39,17 @@ public class ChartItem implements Serializable{
 		super();
 	}
 
-
+	public ChartItem(String studyId, String chartText, String chartObject,
+			String chartType, String head, String sendStudyId, boolean other) {
+		super();
+		this.studyId = studyId;
+		this.chartText = chartText;
+		this.chartObject = chartObject;
+		this.chartType = chartType;
+		this.head = head;
+		this.sendStudyId = sendStudyId;
+		this.other = other;
+	}
 
 	public ChartItem(String studyId, String chartText, String chartObject,
 			String chartType, String head, boolean other) {
@@ -49,7 +61,6 @@ public class ChartItem implements Serializable{
 		this.head = head;
 		this.other = other;
 	}
-
 
 	public ChartItem(String studyId, String chartText, String chartObject,
 			String chartType, String head) {
@@ -69,7 +80,6 @@ public class ChartItem implements Serializable{
 	public void setOther(boolean other) {
 		this.other = other;
 	}
-
 
 	public String getStudyId() {
 		return studyId;
@@ -111,5 +121,12 @@ public class ChartItem implements Serializable{
 	public void setHead(String head) {
 		this.head = head;
 	}
-	
+
+	public String getSendStudyId() {
+		return sendStudyId;
+	}
+
+	public void setSendStudyId(String sendStudyId) {
+		this.sendStudyId = sendStudyId;
+	}
 }
