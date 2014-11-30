@@ -38,8 +38,8 @@ public class LoginServlet extends HttpServlet {
 			responseBean.setSuccess(true);
 			responseBean.setCorrect(false);
 		}else{
-			responseBean.setUserName(user.getName());
-			responseBean.setStudyId(user.getId());
+			responseBean.setUserName(user.getUserName());
+			responseBean.setStudyId(user.getStudyId());
 			responseBean.setSuccess(true);
 			responseBean.setCorrect(true);
 		}

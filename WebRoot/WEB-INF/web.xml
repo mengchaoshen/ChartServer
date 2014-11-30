@@ -9,7 +9,6 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-  
   <servlet>
     <description></description>
     <display-name>loginServlet</display-name>
@@ -32,4 +31,14 @@
     <url-pattern>/sendServlet</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+    <description></description>
+    <display-name>myFriendsServlet</display-name>
+    <servlet-name>myFriendsServlet</servlet-name>
+    <servlet-class>com.servlet.MyFriendsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>myFriendsServlet</servlet-name>
+    <url-pattern>/myFriendsServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

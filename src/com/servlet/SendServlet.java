@@ -46,24 +46,24 @@ public class SendServlet extends HttpServlet {
 			if (chartItem.getChartType().equals("0")) {// 群聊
 				List<User> userList = UserConstant.userList;
 				for (User u : userList) {//u:接受者
-					responseTxt = JSON.toJSONString(new ChartItem(u.getId(),
+					responseTxt = JSON.toJSONString(new ChartItem(u.getStudyId(),
 							chartItem.getChartText(), "group1", "0",
-							    user.getName(),user.getId(), !u.getId()
+							    user.getUserName(),user.getStudyId(), !u.getStudyId()
 									.equals(chartItem.getStudyId())));
-					SendMessage.send(u.getId(), responseTxt);
+					SendMessage.send(u.getStudyId(), responseTxt);
 				}
 			} else {
 				
 				ChartItem ci = new ChartItem();
 				ci.setChartText(chartItem.getChartText());
 				ci.setChartType("1");
-				ci.setHead(user.getName());
-				ci.setSendStudyId(user.getId());
+				ci.setHead(user.getUserName());
+				ci.setSendStudyId(user.getStudyId());
 				ci.setChartObject(chartItem.getChartObject());
 				
 				ci.setStudyId(chartItem.getStudyId());
 				ci.setOther(false);
-				SendMessage.send(user.getId(), JSON.toJSONString(ci));//发给自己
+				SendMessage.send(user.getStudyId(), JSON.toJSONString(ci));//发给自己
 				ci.setOther(true);
 				ci.setStudyId(chartItem.getChartObject());
 				SendMessage.send(chartItem.getChartObject(), JSON.toJSONString(ci));//发给接受者

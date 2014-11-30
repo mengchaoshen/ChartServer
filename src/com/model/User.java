@@ -6,9 +6,9 @@ public class User implements Serializable{
 
 	private static final long serialVersionUID = -8603850515164057242L;
 	
-	private String id;
+	private String studyId;
 	
-	private String name;
+	private String userName;
 	
 	private String password;
 
@@ -16,34 +16,23 @@ public class User implements Serializable{
 		super();
 	}
 
-	public User(String id, String name) {
+
+	public User(String studyId, String userName) {
 		super();
-		this.id = id;
-		this.name = name;
+		this.studyId = studyId;
+		this.userName = userName;
 	}
 
-	public User(String id, String name, String password) {
-		super();
-		this.id = id;
-		this.name = name;
-		this.password = password;
+
+	public String getUserName() {
+		return userName;
 	}
 
-	public String getId() {
-		return id;
+
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 
-	public void setId(String id) {
-		this.id = id;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
 
 	public String getPassword() {
 		return password;
@@ -51,6 +40,14 @@ public class User implements Serializable{
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public String getStudyId() {
+		return studyId;
+	}
+
+	public void setStudyId(String studyId) {
+		this.studyId = studyId;
 	}
 
 	

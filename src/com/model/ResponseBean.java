@@ -1,6 +1,7 @@
 package com.model;
 
 import java.io.Serializable;
+import java.util.List;
 
 public class ResponseBean implements Serializable{
 
@@ -18,6 +19,8 @@ public class ResponseBean implements Serializable{
 	private String userName;
 	
 	private String studyId;
+	
+	private List<User> userList;
 
 	public ResponseBean() {
 		super();
@@ -76,7 +79,13 @@ public class ResponseBean implements Serializable{
 	public void setStudyId(String studyId) {
 		this.studyId = studyId;
 	}
-	
-	
+
+	public List<User> getUserList() {
+		return userList;
+	}
+
+	public void setUserList(List<User> userList) {
+		this.userList = userList;
+	}
 	
 }
