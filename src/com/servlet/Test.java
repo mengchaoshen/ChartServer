@@ -1,6 +1,5 @@
 package com.servlet;
 
-import com.util.BaseUtil;
 
 public class Test {
 
@@ -17,6 +16,5 @@ public class Test {
 
 		}
 
-		// System.out.println(BaseUtil.getHead("沈梦超"));
 	}
 }
