@@ -29,7 +29,6 @@
     <servlet-name>sendServlet</servlet-name>
     <url-pattern>/sendServlet</url-pattern>
   </servlet-mapping>
-  
   <servlet>
     <description></description>
     <display-name>myFriendsServlet</display-name>
@@ -52,4 +51,14 @@
     <url-pattern>/announcementsServlet</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+    <description></description>
+    <display-name>groupAnnServlet</display-name>
+    <servlet-name>groupAnnServlet</servlet-name>
+    <servlet-class>com.servlet.GroupAnnServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>groupAnnServlet</servlet-name>
+    <url-pattern>/groupAnnServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

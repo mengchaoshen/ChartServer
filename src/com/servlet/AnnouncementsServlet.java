@@ -46,8 +46,6 @@ public class AnnouncementsServlet extends HttpServlet {
 		announcement.setSendName(sendName);
 		announcement.setStudyId(studyId);
 		announcement.setTime(time);
-		
-		FileUtil.String2Photo(photoStr, time);
 
 		FileUtil.writeFile(GlobConstant.PATH, time + ".txt",
 				JSON.toJSONString(announcement));
